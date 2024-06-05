@@ -1,0 +1,516 @@
+            /* This is style for Tale of Games*/
+            /*this is style of music player*/
+            @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              height: 100vh;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              font-family: 'Lato', sans-serif;
+              margin: 0;
+            }
+            
+            .music-container {
+                border: 5px solid red;
+              background-color: rgb(95, 90, 90);
+              border-radius: 10px;
+              box-shadow: 0 20px 20px 0 rgba(255, 85, 85, 0.6);
+              display: flex;
+              padding: 20px 30px;
+              position: relative;
+              margin: 100px 0;
+              z-index: 10;
+            }
+            
+            .img-container {
+              position: relative;
+              width: 110px;
+            }
+            .img-container img {
+              border-radius: 50%;
+              object-fit: cover;
+              height: 110px;
+              width: inherit;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              animation: rotate 3s linear infinite;
+            
+              animation-play-state: paused;
+            }
+            
+            .music-container.play .img-container img {
+              animation-play-state: running;
+            }
+            
+            @keyframes rotate {
+              from {
+                transform: rotate(0deg);
+              }
+            
+              to {
+                transform: rotate(360deg);
+              }
+            }
+            
+            .navigation {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              z-index: 1;
+            }
+            
+            .action-btn {
+              background-color: rgb(0, 0, 0);
+              border: solid 5px rgb(0, 0, 0);
+              border-radius: 100px;
+              color: #ff1313;
+              font-size: 15px;
+              cursor: pointer;
+              padding: 10px;
+              margin: 0 20px;
+            }
+            .action-btn:hover
+            {
+              color:  rgb(255, 160, 160);
+              background-color: red;
+              border: solid 5px rgb(255, 0, 0);
+            }
+            .action-btn.action-btn-big
+             {
+              color: #ff1818;
+              font-size: 20px;
+            }
+            .action-btn.action-btn-big:hover
+            {
+              color:  rgb(255, 160, 160);
+            }
+            .action-btn:focus {
+              outline: 0;
+            }
+            
+            .music-info {
+              background-color: rgba(250, 15, 15, 0.914);
+              border-radius: 15px 15px 0 0;
+              position: absolute;
+              top: 0;
+              left: 20px;
+              width: calc(100% - 40px);
+              padding: 10px 10px 10px 150px;
+              opacity: 0;
+              transform: translateY(0%);
+              transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+              z-index: 0;
+            }
+            
+            .music-container.play .music-info {
+              opacity: 1;
+              transform: translateY(-100%);
+            }
+            
+            .music-info h4 {
+              margin: 0;
+            }
+            
+            .progress-container {
+              background: rgb(204, 109, 109);
+              border-radius: 5px;
+              cursor: pointer;
+              margin: 10px 0;
+              height: 4px;
+              width: 100%;
+            }
+            
+            .progress {
+              background-color: #070707;
+              border-radius: 5px;
+              height: 100%;
+              width: 0%;
+              transition: width 0.1s linear;
+            }
+            /* this is body & text style*/
+            .background-color
+            {
+                background-color: rgb(46, 46, 46);
+            }
+            .Header-re4
+            {
+                color: rgb(255, 0, 0);
+            }
+            .Header-last2
+            {
+                color: rgb(166, 201, 232);
+            }
+            .Header-god
+            {
+              color: rgb(0, 255, 204);
+            }
+            .Header-cyber
+            {
+              color: rgb(225, 255, 0);
+            }
+            .Header-spider
+            {
+              color: rgb(9, 9, 255);
+            }
+            .Header-horizon
+            {
+              color: #ec3aec;
+            }
+            #Login
+            {
+                color: hsla(122, 64%, 27%, 0.993);
+            }
+            #signin
+            {
+                color: rgb(213, 11, 11);
+            }
+            #Comment
+            {
+                color: rgb(205, 107, 3);
+            }
+            #lg
+            {
+                border: 5px solid rgb(17, 176, 17);
+                box-shadow: 0 20px 20px 0 #5cd564;
+                border-radius: 10px;
+                background-color: rgb(134, 215, 134);
+            }
+            #si
+            {
+                border: 5px solid rgb(216, 21, 21);
+                box-shadow: 0 20px 20px 0 #d55c5c;
+                border-radius: 10px;
+                background-color: rgb(234, 156, 156);
+            }
+            #serch
+            {
+                border: 5px solid rgb(0, 81, 255);
+                box-shadow: 0 20px 20px 0 #87caec;
+                border-radius: 10px;
+                background-color: rgb(121, 218, 223);
+            }
+            #RE4
+            {
+                border: 5px solid rgba(255, 12, 12, 0.879);
+                box-shadow: 0 20px 20px 0 #d55c5c;
+                border-radius: 10px;
+                background-image:url(./cover/RE4.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+            }
+           
+            #last2
+            {
+                border: 5px solid rgb(143, 238, 255);
+                box-shadow: 0 20px 20px 0 #96bdf3;
+                border-radius: 10px;
+                background-image:url(./cover/last2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+                
+            }
+            #god
+            {
+              border: 5px solid rgb(26, 223, 151);
+              box-shadow: 0 20px 20px 0 #00ffbf;
+              border-radius: 10px;
+              background-image:url(./cover/god\ of\ war.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-attachment: scroll;
+            }
+            #cyber
+            {
+              border: 5px solid rgb(255, 255, 0);
+              box-shadow: 0 20px 20px 0 #c9ef3d;
+              border-radius: 10px;
+              background-image:url(./cover/cyberpunk.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-attachment: scroll;
+            }
+            #spiderman
+            {
+                border: 5px solid rgb(255, 1, 1);
+                box-shadow: 0 20px 20px 0 #0080ff;
+                border-radius: 10px;
+                background-image:url(./cover/spider\ man.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+            }
+            #horizon
+            {
+                border: 5px solid rgb(255, 112, 238);
+                box-shadow: 0 20px 20px 0 #dc9bff;
+                border-radius: 10px;
+                background-image:url(./cover/horizon.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: scroll;
+            }
+            .re4border
+            {
+             border: 5px solid red;
+             box-shadow: 0 20px 20px 0 #d55c5c;
+             border-radius: 10px;
+             background-color: black;
+            }
+            .last2border
+            {
+                border: 5px solid rgb(125, 223, 255);
+                box-shadow: 0 20px 20px 0 #6b97d5;
+                border-radius: 10px;
+                background-color: black;
+            }
+            .godborder
+            {
+              border: 5px solid rgb(46, 235, 172);
+                box-shadow: 0 20px 20px 0 #00ffdd;
+                border-radius: 10px;
+                background-color: black;
+            }
+            .cyberborder
+            {
+              border: 5px solid rgb(255, 255, 0);
+                box-shadow: 0 20px 20px 0 #d4e53a;
+                border-radius: 10px;
+                background-color: black;
+            }
+            .spiderborder
+            {
+              border: 5px solid rgb(255, 0, 0);
+                box-shadow: 0 20px 20px 0 #0077ff;
+                border-radius: 10px;
+                background-color: black;
+            }
+            .horizonborder
+            {
+              border: 5px solid rgb(207, 58, 202);
+                box-shadow: 0 20px 20px 0 #ff7be9;
+                border-radius: 10px;
+                background-color: black;
+            }
+            .onvan1
+            {
+                color: rgb(255, 0, 0);
+                font-size: large;
+            }
+            .onvan2
+            {
+                color: rgb(120, 181, 238);
+                font-size: large;
+            }
+            .onvan3
+            {
+                color: rgb(30, 255, 218);
+                font-size: large;
+            }
+            .onvan4
+            {
+                color: rgb(224, 239, 15);
+                font-size: large;
+            }
+            .onvan5
+            {
+                color: rgb(70, 126, 255);
+                font-size: large;
+            }
+            .onvan6
+            {
+                color: rgb(230, 65, 219);
+                font-size: large;
+            }
+            #table
+            {
+                border: 5px solid rgb(16, 255, 24);
+                border-radius: 10px;
+                background-color: rgb(134, 215, 134);
+                box-shadow:0 20px 20px 0 #5cd564;
+            }
+            #nazarat
+            {
+                border: 5px solid rgb(255, 118, 68);
+                border-radius: 10px;
+                background-color: rgb(255, 199, 102);
+                box-shadow:0 20px 20px 0 orange;
+            }
+            
+           /* .background-color
+            {
+                background-color: rgb(0, 0, 0);
+            }*/
+          div.red-color .bold
+          {
+              color: rgb(255, 12, 12);
+              font-weight: bold;
+          }
+          #last2.onvan
+          {
+            color: rgb(0, 21, 255);
+            font-weight: bold;
+          }
+         .hover-color-re4-link
+         {
+             color: rgb(255, 255, 255);
+         }
+         .hover-color-re4-link:hover
+         {
+            background-color: rgb(0, 0, 0); 
+            color: rgb(255, 0, 0);
+            box-shadow: inset 0 5px 5px 0 #d55c5c;
+         }
+         .hover-color-last2-link
+         {
+             color: rgb(255, 255, 255);
+         }
+         .hover-color-last2-link:hover
+         {
+            background-color: rgb(0, 0, 0); 
+            color: rgb(85, 140, 228);
+            box-shadow: inset 0 5px 5px 0 #97d4ff;
+         }
+         .hover-color-godofwar-link
+         {
+             color: rgb(255, 255, 255);
+         }
+         .hover-color-godofwar-link:hover
+         {
+            background-color: rgb(0, 255, 187); 
+            color: rgb(0, 0, 0);
+            box-shadow: inset 0 5px 5px 0 #0ca577;
+         }
+         .hover-color-cyberpunk-link
+         {
+             color: rgb(255, 255, 255);
+         }
+         .hover-color-cyberpunk-link:hover
+         {
+            background-color: rgb(10, 10, 10); 
+            color: rgb(247, 255, 21);
+            box-shadow: inset 0 5px 5px 0 #efff92;
+         }
+         .hover-color-spiderman-link
+         {
+             color: rgb(255, 183, 183);
+         }
+         .hover-color-spiderman-link:hover
+         {
+            background-color: rgb(194, 208, 255); 
+            color: rgb(255, 21, 29);
+            box-shadow: inset 0 5px 5px 0 #92bcff;
+         }
+         .hover-color-horizon-link
+         {
+             color: rgb(255, 255, 255);
+         }
+         .hover-color-horizon-link:hover
+         {
+            background-color: rgb(194, 208, 255); 
+            color: rgb(112, 0, 111);
+            box-shadow: inset 0 5px 5px 0 #ff11f7;
+         }
+          .lg-color:hover
+          {
+              background-color: rgb(117, 255, 117);
+          }
+          .si-color:hover
+          {
+              background-color: rgb(255, 136, 136);
+          }
+          .search-color:hover
+          {
+              background-color: rgb(165, 165, 255);
+          }
+          .comment-color:hover
+          {
+              background-color: rgb(255, 133, 85);
+          }
+          span.text-color1
+          {
+              color: rgb(255, 255, 255);
+              text-align: justify;
+          }
+          span.text-color2
+          {
+              color: rgb(255, 255, 255);
+              text-align: justify;
+          }
+          span.text-color3
+          {
+              color: rgb(255, 164, 164);
+              text-align: justify;
+          }
+          span.text-color4
+          {
+            color: rgb(255, 255, 255);
+            text-align: justify;
+          }
+        
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  header {
+      text-align: left;
+      padding: 10px 20px;
+  }
+
+  nav ul {
+      text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+}
+
+       
